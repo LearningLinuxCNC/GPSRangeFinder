@@ -1,0 +1,19 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+	Use your debug keystore for this key. It will only be used for debugging.
+	An additional googe_maps_api.xml file will be located in the src\release\res\values directory
+	that will be used for the release version of the project. It will use
+	the keystore for the project.
+	
+	
+    follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the GOOGLE_MAPS_KEY
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"> 
+		GOOGLE_MAPS_KEY </string>
+</resources>

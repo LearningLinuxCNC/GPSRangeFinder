@@ -1,0 +1,180 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        map:uiCompass = "true"
+        tools:context="com.example.jim.shootingrangefinder.MapsActivity"
+        tools:layout="@layout/dummy_mapviewfragment" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <Button
+                android:text="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/button_Recenter"
+                android:onClick="mapRecenter"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:text="Track Position"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textOff="@string/tracking_off"
+                android:textOn="@string/tracking_on"
+                android:id="@+id/toggleButton_track"
+                android:onClick="toggleTracking"
+                android:layout_weight="1"
+                android:checked="true" />
+
+            <ToggleButton
+                android:text="units"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textOff="@string/meters"
+                android:textOn="@string/yards"
+                android:id="@+id/toggleButton_units"
+                android:onClick="toggleUnits"
+                android:layout_weight="1"
+                android:checked="true"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+
+            <Button
+                android:text="@string/set_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/button_set_FL"
+                android:drawablePadding="10dp"
+                android:paddingLeft = "10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="1"
+                android:onClick="setFL" />
+
+            <Button
+                android:text="@string/add_target"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="addTarget"
+                android:layout_weight="1"
+                android:id="@+id/button_add_target" />
+
+            <Button
+                android:text="@string/delete_target"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="delTarget"
+                android:layout_weight="1"
+                android:id="@+id/button_del_target" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="?attr/colorButtonNormal"
+            android:alpha="1.0"
+            android:layout_height="72dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Current Location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textView_curLoc" />
+
+                <TextView
+                    android:text="Lat, Long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textView_curLatLong" />
+
+                <TextView
+                    android:text="Elevation: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textView_curElevation" />
+
+                <TextView
+                    android:text=" "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textView_blank" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Distance:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_curDistance"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="Slope Angle:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_curSlope"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="Azimuth:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_curAzimuth"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="Accuracy:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_curAccuracy"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

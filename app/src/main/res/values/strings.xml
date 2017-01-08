@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GPS Range Finder</string>
+    <string name="title_activity_maps">GPS Range Finder</string>
+    <string name="current_loc">Current Location</string>
+    <string name="firing_line">Firing Line Position</string>
+    <string name="target_num">Target %1$d</string>
+    <string name="distance">Distance: %1$s</string>
+    <string name="distance_na">Distance: N/A</string>
+    <string name="slope">Slope: %1$s</string>
+    <string name="slope_na">Slope: N/A</string>
+    <string name="accuracy">Accuracy: %1$s</string>
+    <string name="elevation">Elevation: %1$s</string>
+    <string name="azimuth">Azimuth: %1$.1f°</string>
+    <string name="azimuth_na">Azimuth: N/A</string>
+    <string name="yards">yards</string>
+    <string name="meters">meters</string>
+    <string name="center">Center</string>
+    <string name="tracking_on">Tracking On</string>
+    <string name="tracking_off">Tracking Off</string>
+    <string name="set_fl">Set FL</string>
+    <string name="add_target">Add Target</string>
+    <string name="delete_target">Delete Target</string>
+    <string name="target_search">Target</string>
+    <string name="firing_line_search">Firing Line</string>
+    <string name="warning">Warning</string>
+    <string name="warning_msg">Shooting sports can be dangerous. This application requires you to
+        take GPS readings down range. Make sure the firing range is clear before moving down range.
+        Follow all shooting sports safety precautions while using this application. \n \n
+        The developer of this app is not responsible for your safety while using this app.</string>
+</resources>
